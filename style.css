@@ -1,0 +1,255 @@
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff5fa;
+    color: #59364b;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* LOGIN */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffd6e9, #f8a9d0, #fff0f7);
+}
+
+.login-card {
+    background: white;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px #c76b9c40;
+}
+
+.logo {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.login-card h1 {
+    color: #d64b91;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: #aa7391;
+    margin-bottom: 25px;
+}
+
+.login-card input {
+    margin-bottom: 15px;
+    padding: 13px;
+    border: 1px solid #f2b5d3;
+    border-radius: 12px;
+}
+
+.login-card input:focus {
+    border-color: #dc69a7;
+    box-shadow: 0 0 8px #f4b6d5;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+.pink-btn {
+    background: #e86ba9;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.pink-btn:hover {
+    background: #c94387;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.footer-text {
+    margin-top: 25px;
+    color: #b17c99;
+}
+
+/* NAVBAR */
+.navbar {
+    background: white;
+    box-shadow: 0 3px 15px #e8b5d040;
+    padding: 15px;
+}
+
+.navbar-brand {
+    color: #d64b91 !important;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.nav-link {
+    color: #774d67;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* CONTENT */
+.page-content {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.welcome-box {
+    background: linear-gradient(135deg, #f7a6cc, #e86ba9);
+    color: white;
+    text-align: center;
+    padding: 65px 25px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px #e86ba944;
+}
+
+.welcome-box h1 {
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.welcome-box p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    line-height: 1.8;
+}
+
+.welcome-icon {
+    font-size: 45px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 45px 0 25px;
+}
+
+.section-title h2 {
+    color: #d64b91;
+    font-weight: bold;
+}
+
+.section-title p {
+    color: #986b84;
+}
+
+.info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    height: 100%;
+    box-shadow: 0 5px 20px #d98bb520;
+    border: 1px solid #f8d3e5;
+}
+
+.info-card h3 {
+    color: #d64b91;
+    margin-bottom: 18px;
+}
+
+.info-card p {
+    line-height: 1.8;
+}
+
+/* LEARNING */
+.learning-header {
+    text-align: center;
+    padding: 35px 10px;
+}
+
+.learning-header h1 {
+    color: #d64b91;
+    font-weight: bold;
+}
+
+.language-card {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #f5c7dc;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 18px #e9a4c520;
+}
+
+.language-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px #d66ba044;
+    border-color: #e86ba9;
+}
+
+.language-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.language-card h3 {
+    color: #d64b91;
+    font-weight: bold;
+}
+
+.language-card p {
+    color: #936b82;
+}
+
+.lesson-box {
+    margin-top: 35px;
+    padding: 30px;
+    background: white;
+    border: 1px solid #f4c4dc;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px #e9a4c520;
+}
+
+.lesson-box h2 {
+    color: #d64b91;
+    margin-bottom: 20px;
+}
+
+.lesson-box p {
+    line-height: 1.9;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 10px;
+    margin-top: 40px;
+    color: #b17c99;
+    border-top: 1px solid #f3c9dd;
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .welcome-box {
+        padding: 40px 15px;
+    }
+
+    .welcome-box h1 {
+        font-size: 25px;
+    }
+
+    .login-card {
+        padding: 30px 20px;
+    }
+}

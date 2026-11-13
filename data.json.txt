@@ -1,0 +1,49 @@
+
+{
+  "project": {
+    "name": "Ouafa Developer",
+    "developer": "Aggoune Ouafa",
+    "specialty": "إعلام آلي مطور الويب والمحمول",
+    "semester": "First Semester",
+    "academicYear": "2026/2027",
+    "supervisor": "kadari fatima"
+  },
+
+  "languages": [
+    {
+      "name": "HTML",
+      "icon": "🌐",
+      "shortDescription": "The structure of web pages",
+      "description": "HTML stands for HyperText Markup Language. It is the standard markup language used to create the structure of web pages. It organizes content such as headings, paragraphs, images, links and forms.",
+      "usage": "HTML is used to build the basic structure and content of websites."
+    },
+    {
+      "name": "CSS",
+      "icon": "🎨",
+      "shortDescription": "The design of web pages",
+      "description": "CSS stands for Cascading Style Sheets. It is a style sheet language used to control the appearance of web pages, including colors, fonts, backgrounds, spacing and layouts.",
+      "usage": "CSS is used to make websites beautiful, organized and responsive on different screens."
+    },
+    {
+      "name": "JavaScript",
+      "icon": "⚡",
+      "shortDescription": "The interactivity of websites",
+      "description": "JavaScript is a programming language that makes web pages interactive. It allows developers to create animations, buttons, forms, dynamic content and interactive applications.",
+      "usage": "JavaScript is used to add functionality and interaction to websites."
+    },
+    {
+      "name": "JSON",
+      "icon": "📦",
+      "shortDescription": "Data organization and exchange",
+      "description": "JSON stands for JavaScript Object Notation. It is a lightweight data format used to store and exchange information between applications and servers.",
+      "usage": "JSON is used to organize data, transfer information and communicate between applications."
+    },
+    {
+      "name": "Bootstrap",
+      "icon": "💜",
+      "shortDescription": "A framework for web design",
+      "description": "Bootstrap is a popular front-end framework that provides ready-made components, a grid system and CSS classes to help developers build responsive websites quickly.",
+      "usage": "Bootstrap is used to create responsive layouts, navigation bars, buttons, cards and forms."
+    }
+  ]
+}

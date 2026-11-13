@@ -1,0 +1,145 @@
+
+// LOGIN SYSTEM
+
+const loginForm = document.getElementById("loginForm");
+
+loginForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const error = document.getElementById("errorMessage");
+
+    if (username === "ouafa" && password === "admin123") {
+
+        document.getElementById("loginPage").classList.add("hidden");
+        document.getElementById("mainPage").classList.remove("hidden");
+
+        showPage("home");
+
+    } else {
+        error.textContent = "Incorrect username or password!";
+    }
+});
+
+
+// NAVIGATION
+
+function showPage(page) {
+
+    document.getElementById("homePage").classList.add("hidden");
+    document.getElementById("learningPage").classList.add("hidden");
+
+    document.getElementById("lessonDetails").classList.add("hidden");
+
+    if (page === "home") {
+        document.getElementById("homePage").classList.remove("hidden");
+    }
+
+    if (page === "learning") {
+        document.getElementById("learningPage").classList.remove("hidden");
+    }
+
+}
+
+
+// LOGOUT
+
+function logout() {
+
+    document.getElementById("mainPage").classList.add("hidden");
+    document.getElementById("loginPage").classList.remove("hidden");
+
+    document.getElementById("loginForm").reset();
+    document.getElementById("errorMessage").textContent = "";
+}
+
+
+// LOAD JSON DATA
+
+fetch("data.json")
+.then(response => {
+    if (!response.ok) {
+        throw new Error("Could not load JSON");
+    }
+    return response.json();
+})
+.then(data => {
+    createLanguageCards(data.languages);
+})
+.catch(error => {
+    console.error(error);
+    document.getElementById("languageCards").innerHTML =
+        "<p>Unable to load lessons. Please run the project using a local server.</p>";
+});
+
+
+// CREATE LANGUAGE CARDS
+
+function createLanguageCards(languages) {
+
+    const container = document.getElementById("languageCards");
+
+    container.innerHTML = "";
+
+    languages.forEach((language, index) => {
+
+        const card = document.createElement("div");
+
+        card.className = "col-12 col-sm-6 col-lg-4";
+
+        card.innerHTML = `
+            <div class="language-card" onclick="showLesson(${index})">
+                <div class="language-icon">${language.icon}</div>
+                <h3>${language.name}</h3>
+                <p>${language.shortDescription}</p>
+                <button class="btn pink-btn">Learn More ♡</button>
+            </div>
+        `;
+
+        container.appendChild(card);
+
+    });
+}
+
+
+// SHOW LESSON
+
+let lessons = [];
+
+function showLesson(index) {
+
+    fetch("data.json")
+    .then(response => response.json())
+    .then(data => {
+
+        lessons = data.languages;
+
+        const lesson = lessons[index];
+
+        document.getElementById("lessonTitle").textContent =
+            lesson.icon + " " + lesson.name;
+
+        document.getElementById("lessonDescription").textContent =
+            lesson.description;
+
+        document.getElementById("lessonUsage").textContent =
+            lesson.usage;
+
+        document.getElementById("languageCards").classList.add("hidden");
+
+        document.getElementById("lessonDetails").classList.remove("hidden");
+
+    });
+}
+
+
+// BACK TO LESSONS
+
+function closeLesson() {
+
+    document.getElementById("lessonDetails").classList.add("hidden");
+
+    document.getElementById("languageCards").classList.remove("hidden");
+
+}
