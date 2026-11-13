@@ -1,4 +1,3 @@
-
 // LOGIN SYSTEM
 
 const loginForm = document.getElementById("loginForm");
@@ -143,3 +142,4 @@ function closeLesson() {
     document.getElementById("languageCards").classList.remove("hidden");
 
 }
+
